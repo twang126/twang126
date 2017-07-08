@@ -2400,7 +2400,7 @@
 			}
 
 			.icon.alt:before {
-				color: #1c1d26 !important;
+				color: #000000 !important;
 				text-shadow: 1px 0 0 #ffffff, -1px 0 0 #ffffff, 0 1px 0 #ffffff, 0 -1px 0 #ffffff;
 			}
 
@@ -2546,7 +2546,7 @@
 			}
 
 				ul.icons li .icon {
-					font-size: 0.8em;
+					font-size: 2em;
 				}
 
 					ul.icons li .icon:before {
