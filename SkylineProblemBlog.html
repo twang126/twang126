@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Skyline Problem</title>
+</head>
+
+<body for="html-export">
+    <div class="mume markdown-preview   ">
+    <center><h1> The Skyline Problem </h1></center>
+    <center> <img src="blog_image/skyline.jpg" alt="logo"></center><br></br>
+
+    <h4> Introduction to the problem </h4>
+    <p>
+        Imagine you want to outline the skyline of a certain city while looking at it from far away. Since you're so far away, eventually the
+        individual buildings will overlap and form one cohesive body, thus forming the skyline. The problem is given information about the buildings that make up the
+        city, can you create this view of the skyline. For the sake of simplicity, let's assume that each building is a rectangle.
+    </p>
+
+    <h4> Representing a building </h4>
+    <p>
+        First, we need to choose how to represent buildings. Since, each building is a rectangle, we know we can represent each building with 3 pieces of information:
+        the starting point of the building, the width of the building, and the height of the building. So, initially we might choose to represent our buildings as a tuple of
+        (starting point, width, and height). However, we might find that having the explicit width is not as useful as having the ending point of the building. Meaning, we need to
+        keep track of when each building starts and ends. The most straightforward way to do this is to encode each building as (start, end, height). So, in the Object Oriented Programming paradigm,
+        we might have something like this:
+    </p>
+    <pre class="language-java">
+        public class <span class="token keyword">Building</span> {
+            <span class = "token keyword"> int </span> start;
+            <span class = "token keyword"> int </span> end;
+            <span class = "token keyword"> int </span> height;
+
+            public<span class = "token keyword"> Building</span> (<span class = "token keyword">int </span>start, <span class = "token keyword">int </span>end, <span class = "token keyword">int </span>height) {
+                <span class = "token keyword"> this.</span>start = start;
+                <span class = "token keyword"> this.</span>end = end;
+                <span class = "token keyword"> this.</span>height = height;
+            }
+        }
+    </pre>
+
+
+
+</html>
