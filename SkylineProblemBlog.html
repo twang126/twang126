@@ -8,26 +8,26 @@
 
 <body for="html-export">
     <div class="mume markdown-preview   ">
-    <center><h1> The Skyline Problem </h1></center>
-    <center><p> Timothy Wang - 10/26/2017 </p></center>
-    <center> <img src="blog_image/skyline.jpg" alt="logo"></center><br></br>
+        <center>
+            <h1> The Skyline Problem </h1></center>
+        <center>
+            <p> Timothy Wang - 10/26/2017 </p>
+        </center>
+        <center> <img src="blog_image/skyline.jpg" alt="logo"></center><br></br>
 
-    <h4> Introduction to the problem </h4>
-    <p>
-        Imagine you want to outline the skyline of a certain city while looking at it from far away. Since you're so far away, eventually the
-        individual buildings will overlap and form one cohesive body, thus forming the skyline. The problem is given information about the buildings that make up the
-        city, can you create this view of the skyline. For the sake of simplicity, let's assume that each building is a rectangle.
-    </p>
+        <h4> Introduction to the problem </h4>
+        <p>
+            Imagine you want to outline the skyline of a certain city while looking at it from far away. Since you're so far away, eventually the individual buildings will overlap and form one cohesive body, thus forming the skyline. The problem is given information
+            about the buildings that make up the city, can you create this view of the skyline. For the sake of simplicity, let's assume that each building is a rectangle.
+        </p>
 
-    <h4> Representing a building </h4>
-    <p>
-        First, we need to choose how to represent buildings. Since, each building is a rectangle, we know we can represent each building with 3 pieces of information:
-        the starting point of the building, the width of the building, and the height of the building. So, initially we might choose to represent our buildings as a tuple of
-        (starting point, width, and height). However, we might find that having the explicit width is not as useful as having the ending point of the building. Meaning, we need to
-        keep track of when each building starts and ends. The most straightforward way to do this is to encode each building as (start, end, height). So, in the Object Oriented Programming paradigm,
-        we might have something like this (in Java):
-    </p>
-    <pre class="language-java">
+        <h4> Representing a building </h4>
+        <p>
+            First, we need to choose how to represent buildings. Since, each building is a rectangle, we know we can represent each building with 3 pieces of information: the starting point of the building, the width of the building, and the height of the building.
+            So, initially we might choose to represent our buildings as a tuple of (starting point, width, and height). However, we might find that having the explicit width is not as useful as having the ending point of the building. Meaning, we need
+            to keep track of when each building starts and ends. The most straightforward way to do this is to encode each building as (start, end, height). So, in the Object Oriented Programming paradigm, we might have something like this (in Java):
+        </p>
+        <pre class="language-java">
         public class <span class="token keyword">Building</span> {
             <span class = "token keyword"> int</span> start;
             <span class = "token keyword"> int</span> end;
@@ -41,46 +41,45 @@
         }
     </pre>
 
-    <h4> Reasoning </h4>
-    <p>
-        Now that we have a way to programatically represent each <strong>Building</strong>, we can start thinking about how to solve this problem. What should our program return? It is reasonable to return
-        a list of tuples that represent coordinates. Since we know each Building is a rectangle, we can return a series of tuples that have (x value, height). Thus, whoever uses our program can easily create
-        a shading of this skyline since they would just need to connect each of these coordinates with a horizontal line. <br></br>
+        <h4> Reasoning </h4>
+        <p>
+            Now that we have a way to programatically represent each <strong>Building</strong>, we can start thinking about how to solve this problem. What should our program return? It is reasonable to return a list of tuples that represent coordinates.
+            Since we know each Building is a rectangle, we can return a series of tuples that have (x value, height). Thus, whoever uses our program can easily create a shading of this skyline since they would just need to connect each of these coordinates
+            with a horizontal line. <br></br>
 
-        Since we have this figured out, we next need to reason about an algorithm to solve this problem. First, imagine the simplest case where there are no overlapping buildings. Then, the skyline would just be
-        (start, height), (end, height) for each of the Buildings. Now what if there are overlapping buildings? In this case, for each endpoint of a building (start or end), we only need the maximum height of all currently overlapping buildings at that point.
-        Basically, we need a convenient way to know, any any given time, what the maximum Building height is because, when looking at a city from afar, we're only going to see the outline of the tallest building if any amount overlap. Naturally, this leads us to
-        use a heap data structure, that just stores building heights at any given time. <br></br>
+            Since we have this figured out, we next need to reason about an algorithm to solve this problem. First, imagine the simplest case where there are no overlapping buildings. Then, the skyline would just be (start, height), (end, height) for each of the
+            Buildings. Now what if there are overlapping buildings? In this case, for each endpoint of a building (start or end), we only need the maximum height of all currently overlapping buildings at that point. Basically, we need a convenient way
+            to know, any any given time, what the maximum Building height is because, when looking at a city from afar, we're only going to see the outline of the tallest building if any amount overlap. Naturally, this leads us to use a heap data structure,
+            that just stores building heights at any given time. <br></br>
 
-        Finally, we need a way to smartly interact with this heap. Whenever we see the start or end of a Building, we want to access the highest current Building's height. If we see a start, we should add our current Building's height to the heap. If we see an end, we shoud remove our Building's height.
-        This means that we are going to need to take our Buildings and unwrap them into tuples of length 2 like: (start, height) and (end, height). We also need a way to indicate whether a tuple corresponds to a start or an end point and we can do this by negating the height when dealing with start.
-        This furthermore helps us because we will want to access the start points before the end points, so we can use this information to sort our list of these tuples.
-    </p>
+            Finally, we need a way to smartly interact with this heap. Whenever we see the start or end of a Building, we want to access the highest current Building's height. If we see a start, we should add our current Building's height to the heap. If we see an
+            end, we shoud remove our Building's height. This means that we are going to need to take our Buildings and unwrap them into tuples of length 2 like: (start, height) and (end, height). We also need a way to indicate whether a tuple corresponds
+            to a start or an end point and we can do this by negating the height when dealing with start. This furthermore helps us because we will want to access the start points before the end points, so we can use this information to sort our list
+            of these tuples.
+        </p>
 
-    <h4> Algorithm </h4>
-    <p>
-        Input: List of Buildings<br>
-        Output: List of Size 2 Arrays that represent vertical lines (x coordinate, then height)<br>
-        Procedure:<br>
-        <ol>
-            <li>
-                Loop through the Buildings. For each Building, add [start, -height] and [end, height] to list A.
-            </li>
+        <h4> Algorithm </h4>
+        <p>
+            Input: List of Buildings<br> Output: List of Size 2 Arrays that represent vertical lines (x coordinate, then height)<br> Procedure:
+            <br>
+            <ol>
+                <li>
+                    Loop through the Buildings. For each Building, add [start, -height] and [end, height] to list A.
+                </li>
 
-            <li>
-                Primarily sort list A by start, and then by height. That way, we see the leftmost buildings first, and within those buildings, we will place
-                the starts in front of the ends.
-            </li>
+                <li>
+                    Primarily sort list A by start, and then by height. That way, we see the leftmost buildings first, and within those buildings, we will place the starts in front of the ends.
+                </li>
 
-            <li>
-                Create a heap. Then, for each entry in list A, check if it represents a start. If it represents a start, then add (-height) to the heap since we have negated the height for starts. Then,
-                take the maximnum of the heap and add it to the list we will return as [start, maximum]. We do the same for ends, except we remove heights. At the end of the algorithm, we will return our accumulated list.
-            </li>
-        </ol>
-    </p>
+                <li>
+                    Create a heap. Then, for each entry in list A, check if it represents a start. If it represents a start, then add (-height) to the heap since we have negated the height for starts. Then, take the maximnum of the heap and add it to the list we will return
+                    as [start, maximum]. We do the same for ends, except we remove heights. At the end of the algorithm, we will return our accumulated list.
+                </li>
+            </ol>
+        </p>
 
-    <h4> Code </h4>
-    <pre class="language-java">
+        <h4> Code </h4>
+        <pre class="language-java">
         public <span class="token keyword">List&ltint[]&gt</span> getSkyline(<span class="token keyword">List&ltBuilding&gt</span> buildings) {
             # Step 1
             <span class="token keyword">List&ltint[]&gt</span> A = new <span class="token keyword">ArrayList&lt&gt</span>();
@@ -118,14 +117,12 @@
         }
     </pre>
 
-    <h4> Complexity Analysis </h4>
-    <p>
-        Let's take a look at each of our operations: <br>
-        - Looping through the List of Buildings - O(n) <br>
-        - Sorting list A - O(2n log (2n)) == O (n log n) <br>
-        - Creating the answer list - O(2n * 2n) = O(n^2) <br></br>
+        <h4> Complexity Analysis </h4>
+        <p>
+            Let's take a look at each of our operations: <br> - Looping through the List of Buildings - O(n) <br> - Sorting list A - O(2n log (2n)) == O (n log n) <br> - Creating the answer list - O(2n * 2n) = O(n^2) <br></br>
 
-        Since removing from a heap takes linear time, this entire algorithm is characterized by the O(n^2) term.
+            Since removing from a heap takes linear time, this entire algorithm is characterized by the O(n^2) term.
 
-    </p>
+        </p>
+
 </html>
