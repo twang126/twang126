@@ -49,7 +49,7 @@
 
             Since we have this figured out, we next need to reason about an algorithm to solve this problem. First, imagine the simplest case where there are no overlapping buildings. Then, the skyline would just be (start, height), (end, height) for each of the
             Buildings. Now what if there are overlapping buildings? In this case, for each endpoint of a building (start or end), we only need the maximum height of all currently overlapping buildings at that point. Basically, we need a convenient way
-            to know, any any given time, what the maximum Building height is because, when looking at a city from afar, we're only going to see the outline of the tallest building if any amount overlap. Naturally, this leads us to use a heap data structure,
+            to know, any any given time, what the maximum building height is because, when looking at a city from afar, we're only going to see the outline of the tallest building if any amount overlap. Naturally, this leads us to use a heap data structure,
             that just stores building heights at any given time. <br></br>
 
             Finally, we need a way to smartly interact with this heap. Whenever we see the start or end of a Building, we want to access the highest current Building's height. If we see a start, we should add our current Building's height to the heap. If we see an
@@ -72,7 +72,7 @@
                 </li>
 
                 <li>
-                    Create a heap. Then, for each entry in list A, check if it represents a start. If it represents a start, then add (-height) to the heap since we have negated the height for starts. Then, take the maximnum of the heap and add it to the list we will return
+                    Create a heap. Then, for each entry in list A, check if it represents a start. If it represents a start, then add (-height) to the heap since we have negated the height for starts. Then, take the maximum of the heap and add it to the list we will return
                     as [start, maximum]. We do the same for ends, except we remove heights. At the end of the algorithm, we will return our accumulated list.
                 </li>
             </ol>
