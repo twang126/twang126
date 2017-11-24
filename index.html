@@ -1,178 +1,344 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+	Story by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
 
 <head>
-    <link rel="stylesheet" href="style.css">
-    <title>Tim Wang</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="timothy wang, machine learning, computer science, software engineer, university of maryland">
+	<title>Tim Wang</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="assets/css/main.css" />
 </head>
 
-<body for="html-export">
-    <div class="mume markdown-preview   ">
-        <br>
-        <center>
-            <h1>Hi, I'm Tim. </h1>
-            <center><img src="me.jpg" alt="logo">
-                <br>
-            </center>
-        </center>
-        <br>
-        <center>
-            <p> <strong>Computer Science</strong> | <strong>QUEST Honors College</strong> | <strong>University of Maryland, College Park 2020</strong>
-            </p>
-            <br>
-            <img src=combined_umd_quest.png>
-        </center>
-        <br>
-        <p> You can view my resume <a href=resume.pdf target=_ blank>here.</a></p>
-        <u><h1 class = 'mume-header' id = 'introduction'><font color=#524F4C> About Me</font></h1></u>
-        <p>
-            My name is Timothy Wang and I am currently a Sophomore studying Computer Science at the University of Maryland, College Park.
-            <br>
-            <br> Within the field of Computer Science, I am most interested in Software Engineering, Machine Learning, and Distributed Systems. Outside of the classroom, I enjoy playing sports like basketball and soccer, and exercising to stay fit. When
-            I'm not coding or at the gym or field, I can be found hanging out with my friends or in my dorm either watching college basketball or episodes of <a href=https://www.netflix.com/title/70136120 target="_blank">The Office</a> over and over again.
-            <br>
-            <br> Recently, I've been spending a lot of time building a huge Spotify playlist filled with some of my favorite songs over the years. You can find this playlist <a href="https://open.spotify.com/user/1222831100/playlist/4k61M0rMae2k176h3yQnt8"
-                target="_blank">here.<a>
-    I am also trying to start writing a blog. You can find that <a href = blog.html target = _blank> here</a>.
-            <center><img src="aboutme.png" alt="logo"></center>
-        </p>
-        <u><h1 class = 'mume-header' id = 'experience'><font color=#524F4C> Work Experience </font></h1></u>
-        <p>
-            <strong>Summer 2018</strong> - <a href=https://www.predictivetechnologies.com/en> Applied Predictive Technologies </a>
-            <br>
-            <blockquote> Software Engineering Intern @ Arlington, VA</blockquote>
-            <center><img src="APT_Logo.png" alt="logo"></center>
-            <br></br>
-        </p>
+<body>
 
-        <br></br>
+	<!-- Wrapper -->
+	<div id="wrapper" class="divided">
 
-        <p>
-            <strong>Summer 2017</strong> - <a href=http://www.siftscience.com target="_blank"> Sift Science </a>
-            <br>
-            <blockquote> Software Engineering Intern @ San Francisco, CA </blockquote>
-            <br></br>
-            <center><img src="sift_science.jpg" alt="logo"></center><br>
-            <strong> Sift Science </strong>is a Y-Combinator alum and a high growth start-up specializing in machine learning fraud protection. At Sift, I worked on a variety of projects. Firstly, I implemented ~100 new features that helped improve our
-            machine learning models. I also used MapReduce and Apache Crunch to cut down on feature extraction and model training times by over 90%. <br></br>
+		<!-- One -->
+		<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+			<div class="content">
+				<h1>Hi, I'm Tim.</h1>
+				<br>
+				<p>
+					My name is Timothy Wang and I am currently a Sophomore studying Computer Science at the University of Maryland, College Park. I am a member of the Advanced Cybersecurity Experience (ACES) Honors College and QUEST Honors Program.
+					<br>
+					<br> Within the field of Computer Science, I am most interested in Software Engineering, Machine Learning, and Distributed Systems. Outside of the classroom, I enjoy playing sports like basketball and soccer, and exercising to stay fit. When I'm
+					not coding or at the gym or field, I can be found hanging out with my friends or in my dorm either watching college basketball or episodes of <a href=https://www.netflix.com/title/70136120 target="_blank">The Office</a> over and over again. I have
+					also started playing chess seriously for the first time since 5th grade, where I placed 5th in the State of Maryland. You can see my Chess.com account <a href=https://www.chess.com/member/twangggg target="_blank">here</a>.
+					<br>
+					<br> Recently, I've been spending a lot of time building a huge Spotify playlist filled with some of my favorite songs over the years. You can find this playlist <a href="https://open.spotify.com/user/1222831100/playlist/4k61M0rMae2k176h3yQnt8" target="_blank">here.</a>					I am also trying to start writing a blog. You can find that <a href=b log.html target=_ blank> here</a>.
+				</p>
+				<p> You can view my resume <a href=resume.pdf target=_ blank>here</a></p>.
+				<ul class="actions vertical">
+					<li><a href="#first" class="button big wide smooth-scroll-middle">My Work Experience</a></li>
+				</ul>
+			</div>
+			<div class="image">
+				<img src="images/banner.jpg" alt="" />
+			</div>
+		</section>
 
-            My main project was to implement Naive Bayes text classification models. Although it was incredibly fun to write a Machine Learning model from scratch, Naive Bayes models are notoriously known for their simplicity. Thus, the real challenge was how to
-            scale these models to handle 150 million transactions a day and over 12 TB of training data. Via distributed system frameworks and some clever programming, I was able to make these models very memory efficient and also very fast to train and
-            generate predictions. It was extremely rewarding to have the opportunity to write a scalable Machine Learning system from scratch to finish, and also realize that I am helping protect billions of people from fraud every week.
-        </p>
+		<!-- Two -->
+		<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
+			<div class="content">
+				<h2>Applied Predictive Technologies</h2>
+				<h4>Summer 2018 Software Engineering Intern @ Arlington, VA</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio
+					lorem ipsum dolor sit amet.</p>
+				<ul class="actions vertical">
+					<li><a href="https://www.predictivetechnologies.com/en" target=_blank class="button">Learn More</a></li>
+				</ul>
+			</div>
+			<div class="image">
+				<img src="APT_Logo.png" alt="">
+			</div>
+		</section>
 
-        <br></br>
+		<!-- Three -->
+		<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+			<div class="content">
+				<h2>Sift Science</h2>
+				<h4>Summer 2017 Software Engineering Intern @ San Francisco, CA</h4>
+				<p><strong> Sift Science </strong>is a Y-Combinator alum and a high growth start-up specializing in machine learning fraud protection. At Sift, I worked on a variety of projects. Firstly, I implemented ~100 new features that helped improve our machine
+					learning models. I also used MapReduce and Apache Crunch to cut down on feature extraction and model training times by over 90%. <br></br>
 
-        <p>
-            <strong>Spring 2017</strong> - <a href=http://www.cs.umd.edu/ target="_blank"> University of Maryland, Department of Computer Science </a>
-            <br>
-            <blockquote>Undergraduate Teaching Assistant @ College Park, MD</blockquote>
-            <br></br>
-            <center><img src="computer_science.png" alt="logo"></center><br> In the 2017 Spring semester, I had the wonderful opportunity to TA <strong> CMSC132- Advanced Java & Data Structures. </strong> As a Teaching Assistant, I led two 1-hour discussions
-            a week and also held 2 office hours per week. I wanted to TA CMSC132 not only because it was my favorite CS course, but also because it was the first I ever took at the University of Maryland. I benefitted a lot from a great teaching staff
-            as a student, and I wanted to give back in any way I could. <br></br>
+					My main project was to implement Naive Bayes text classification models. Although it was incredibly fun to write a Machine Learning model from scratch, Naive Bayes models are notoriously known for their simplicity. Thus, the real challenge was how to
+					scale these models to handle 150 million transactions a day and over 12 TB of training data. Via distributed system frameworks and some clever programming, I was able to make these models very memory efficient and also very fast to train and generate
+					predictions. It was extremely rewarding to have the opportunity to write a scalable Machine Learning system from scratch to finish, and also realize that I am helping protect billions of people from fraud every week.</p>
+				<ul class="actions vertical">
+					<li><a href="https://siftscience.com/" target=_blank class="button">Learn More</a></li>
+				</ul>
+			</div>
+			<div class="image">
+				<img src="sift.png" alt="logo"></center>
+			</div>
+		</section>
 
-            As a TA, I planned instructional slides before every discussion session that either augmented what the professor went over in class or introduced new and interesting material. You can view those slides <a href=https://drive.google.com/drive/u/1/folders/0B718gsB7x0asMmp4OG91UHZ6SHM
-                target=_ blank>here</a>. TAing also sparked my passion for teaching and helping others. So, while during the course of the semester I taught my students about a collection of data structures and some advanced Java concepts, I learned so much
-            more in return about maturity, empathy, and life. Many of my students and I are still close today.
+		<!-- Four -->
+		<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+			<div class="content">
+				<h2>University of Maryland, Department of CS</h2>
+				<h4>Spring 2017 Undergraduate TA @ College Park, MD</h4>
+				<p>In the 2017 Spring semester, I had the wonderful opportunity to TA <strong> CMSC132- Advanced Java & Data Structures. </strong> As a Teaching Assistant, I led two 1-hour discussions a week and also held 2 office hours per week. I wanted to TA CMSC132
+					not only because it was my favorite CS course, but also because it was the first I ever took at the University of Maryland. I benefitted a lot from a great teaching staff as a student, and I wanted to give back in any way I could. <br></br>
 
-        </p>
+					As a TA, I planned instructional slides before every discussion session that either augmented what the professor went over in class or introduced new and interesting material. You can view those slides <a href=https://drive.google.com/drive/u/1/folders/0B718gsB7x0asMmp4OG91UHZ6SHM
+					    target=_ blank>here</a>. TAing also sparked my passion for teaching and helping others. So, while during the course of the semester I taught my students about a collection of data structures and some advanced Java concepts, I learned so much more
+					in return about maturity, empathy, and life. Many of my students and I are still close today.
+				</p>
+				<ul class="actions vertical">
+				</ul>
+			</div>
+			<div class="image">
+				<img src="computer_science.png" alt="" />
+			</div>
+		</section>
 
-        <br></br>
+		<!-- Four -->
+		<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+			<div class="content">
+				<h2>Cipher Systems</h2>
+				<h4>Winter 2016 Software Development Intern @ Annapolis, MD</h4>
+				<p>At Cipher Systems, I was initially introduced to the .NET framework. Although I am still far from an expert, I found that my time at Cipher Systems taught me about a new paradigm of programming that is extremely widespread in industry. <br></br>
 
-        <p>
-            <strong>Winter 2016</strong> - <a href=https://www.cipher-sys.com/ target="_blank">Cipher Systems</a>
-            <br>
-            <blockquote>Software Development Intern @ Annapolis, MD</blockquote>
-            <br></br>
-            <center><img src="Cipher-Logo-Web.png" alt="logo"></center><br> At Cipher Systems, I was initially introduced to the .NET framework. Although I am still far from an expert, I found that my time at Cipher Systems taught me about a new paradigm of programming
-            that is extremely widespread in industry. <br></br>
-
-            At Cipher Systems, my main project was to provide some way to semantically tag news articles. Previously, Cipher relied on IBM Watson to do this, and that service was incredibly expensive. Using Stanford CoreNLP's natural language processing library,
-            I wrote a NLP pipeline in Java that could replicate IBM Watson's role, thus saving the company quite a lot of money. This pipeline was eventually transformed into a Java microservice, and finally translated into C#.
-        </p>
-
-        <br></br>
-
-        <p>
-            <strong>Fall 2016</strong> - <a href=https://contentanalyticsinc.com/ target="_blank"> Content Analytics </a>
-            <br>
-            <blockquote>Software Engineering Intern @ San Francisco, CA</blockquote>
-            <br></br>
-            <center><img src="content-analytics-logo.png" alt="logo"></center><br> At ContentAnalytics, my main task was to help companies verify their inventories across all third-party retailer websites. Namely, these companies wanted to make sure that the
-            pictures and information the third-party sellers had on their products matched their expectations. To tackle this, I wrote a Python script that utilizes a fleet of webcrawlers to perform image comparisons on thousands of images. I found the
-            problem's lack of a closed form solution very fun, as it meant that I had to be creative and innovative in my approach.
-        </p>
-
-        <br></br>
-
-        <p>
-            <strong>Summer 2016</strong> - <a href=http://www.cs.umd.edu/ target="_blank"> University of Maryland, Department of Computer Science </a>
-            <br>
-            <blockquote>Undergraduate Research Fellow @ College Park, </blockquote>
-            <br></br>
-            <center><img src="computer_science.png" alt="logo"></center><br> I investigated Pollard-Rho's semi-prime factoring algorithm. Factoring algorithms are incredibly important as the hardness of the problem is the basis for almost all cryptographic schemes.
-            My team and I were able to cut down Pollard-Rho's runtime by a constant amount of about 97% and our version of his algorithm is potentially one of the fastest factoring algorithms for numbers less than 10^7.
-        </p>
-
-        <u><h1 class = 'mume-header' id = 'research'> <font color=#524F4C>Research </font></h1></u>
-        <p>
-            <strong> Dynamic Reconfiguration of Computer Systems </strong>
-            <br></br>
-
-            <strong> Optimizing Semi-Prime Factorization Methods </strong>
-            <br></br>
-        </p>
-
-        <u><h1 class = 'mume-header' id = 'projects'> <font color=#524F4C>Personal Projects</font></h1></u>
-        <p>
-            <strong> Ballmer's Peak </strong><br>
-            <center><img src="ballmers_peak.png" alt="logo"></center>
-            <br></br>
-
-            <strong> Supermodel </strong><br>
-            <center><img src="supermodel.png" alt="logo"></center>
-            <br></br>
-
-            <strong> Bipartisan </strong><br>
-            <center><img src="bipartisan.png" alt="logo"></center>
-            <br></br>
-
-            <strong> Method to the Madness </strong><br>
-            <center><img src="marchmadness.jpeg" alt="logo"></center>
-            <br></br>
-        </p>
+					At Cipher Systems, my main project was to provide some way to semantically tag news articles. Previously, Cipher relied on IBM Watson to do this, and that service was incredibly expensive. Using Stanford CoreNLP's natural language processing library,
+					I wrote a NLP pipeline in Java that could replicate IBM Watson's role, thus saving the company quite a lot of money. This pipeline was eventually transformed into a Java microservice, and finally translated into C#.</p>
+				<ul class="actions vertical">
+					<li><a href="https://www.cipher-sys.com/" target=_blank class="button">Learn More</a></li>
+				</ul>
+			</div>
+			<div class="image">
+				<img src="Cipher-Logo-Web.png" alt="" />
+			</div>
+		</section>
 
 
-        <u><h1 class = 'mume-header' id = 'fun_links'> <font color=#524F4C>Favorites</font></h1></u>
-        <p>
-            <a href=https://imgur.com/gallery/voutF target=_ blank> sorting algorithms cleverly visualized</a> <br>
-            <a href=https://kenpom.com/ target=_ blank> some great college basketball statistics</a> <br>
-            <a href=http://games.espn.com/ffl/clubhouse?leagueId=1580300&teamId=8&seasonId=2017 target=_ blank> my espn fantasy football team </a> (you may need an espn log in to view)<br>
-            <a href=https://reddit.com/r/earthporn target=_ blank> my favorite subreddit </a> <br>
-            <a href=https://www.youtube.com/watch?v=zAAsykRfLwo target=_ blank> a good pump-up instrumental mix </a> <br>
-            <a href=https://www.youtube.com/watch?v=9LKT7R-ZA1g target=_ blank> a great chill instrumental mix </a> <br>
-            <a href=https://www.youtube.com/watch?v=XaLPA69ohNk target=_ blank> a good summertime mix </a> <br>
-            <a href=https://github.com/adapta-project/adapta-gtk-theme target=_ blank> my fav ubuntu theme </a> <br>
-            <a href=https://github.com/numixproject/numix-icon-theme-circle target=_ blank> my fav ubuntu icon pack </a> <br>
-            <a href=http://www.informit.com/articles/article.aspx?p=30596&seqNum=6 target=_ blank> the first ever article ive ever read on machine learning </a><br>
-            <a href=https://drive.google.com/drive/u/1/folders/0B718gsB7x0asTzA1R0trU0dBck0 target=_ blank> a bunch of beautiful, hand curated wallpapers</a>
-        </p>
+		<!-- Four -->
+		<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+			<div class="content">
+				<h2>Content Analytics</h2>
+				<h4>Fall 2016 Software Engineering Intern @ San Francisco, CA</h4>
+				<p>At ContentAnalytics, my main task was to help companies verify their inventories across all third-party retailer websites. Namely, these companies wanted to make sure that the pictures and information the third-party sellers had on their products
+					matched their expectations. To tackle this, I wrote a Python script that utilizes a fleet of webcrawlers to perform image comparisons on thousands of images. I found the problem's lack of a closed form solution very fun, as it meant that I had to
+					be creative and innovative in my approach.</p>
+				<ul class="actions vertical">
+					<li><a href="https://www.contentanalyticsinc.com/" target=_blank class="button">Learn More</a></li>
+				</ul>
+			</div>
+			<div class="image">
+				<img src="content-analytics-logo.png" alt="" />
+			</div>
+		</section>
 
-        <u><h1 class = 'mume-header' id = 'contact_me'> <font color=#524F4C>Contact Me </font></h1></u>
-        <p>
-            240-751-7188 (Cell)<br>
-            <a href=https://www.linkedin.com/in/timothyxwang/ target=_ blank>https://www.linkedin.com/in/timothyxwang/</a> <br>
-            <a href=https://www.facebook.com/txwang126 target=_blank>https://www.facebook.com/txwang126</a><br>
-            <a href=https://www.instagram.com/twang126/ target=_blank> https://www.instagram.com/twang126/</a><br>
-            <a href=https://github.com/Timtim305 target=_ blank>https://github.com/Timtim305 </a><br>
-        </p>
+		<!-- Four -->
+		<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+			<div class="content">
+				<h2>University of Maryland, Department of CS</h2>
+				<h4>Summer 2016 Undergraduate Researcher @ College Park, MD</h4>
+				<p>I investigated Pollard-Rho's semi-prime factoring algorithm. Factoring algorithms are incredibly important as the hardness of the problem is the basis for almost all cryptographic schemes. My team and I were able to cut down Pollard-Rho's runtime
+					by a constant amount of about 97% and our version of his algorithm is potentially one of the fastest factoring algorithms for numbers less than 10^7.</p>
+				<ul class="actions vertical">
+					<li><a href="https://github.com/Timtim305/pollardrhobrent-cycle" target=_blank class="button">Learn More</a></li>
+				</ul>
+			</div>
+			<div class="image">
+				<img src="computer_science.png" alt="" />
+			</div>
+		</section>
+
+		<!-- Five -->
+		<section class="wrapper style1 align-center">
+			<div class="inner">
+				<h2>Selected Projects and Research</h2>
+				<p>Browse through some of the personal and research projects I've completed, and some that I am currently working on.</p>
+			</div>
+
+			<!-- Gallery -->
+			<div class="gallery style2 medium lightbox onscroll-fade-in">
+				<article>
+					<a href="images/gallery/fulls/01.jpg" class="image">
+										<img src="images/gallery/thumbs/01.jpg" alt="" />
+									</a>
+					<div class="caption">
+						<h3>Dynamic Reconfiguration of Computer Systems</h3>
+						<p>Currently working on with Professor Jim Purtilo.</p>
+					</div>
+				</article>
+				<article>
+					<a href="images/gallery/fulls/02.jpg" class="image">
+										<img src="images/gallery/thumbs/02.jpg" alt="" />
+									</a>
+					<div class="caption">
+						<h3>Optimizing Semi-Prime Factorization Methods</h3>
+						<ul class="actions">
+							<li><a class="button small" href="https://github.com/Timtim305/pollardrhobrent-cycle" target="_blank">Details</a></li>
+						</ul>
+					</div>
+				</article>
+				<article>
+					<a href="March-Madness.jpg" class="image">
+										<img src="March-Madness.jpg" alt="" />
+									</a>
+					<div class="caption">
+						<h3>Method to the Madness - Fall 2016</h3>
+						<p style=>My first machine learning project, created at BigRedHacks, hosted by Cornell University. Tried to fit a Neural Network to data provided by KenPom.</p>
+						<ul class="actions">
+							<li><a class="button small" href="https://github.com/Timtim305/marchmadness" target="_blank">Details</a></li>
+						</ul>
+					</div>
+				</article>
+				<article>
+					<a href="bipartisan.png" class="image">
+						<center><img src="bipartisan.png" alt="" /></center>
+					</a>
+					<div class="caption">
+						<h3>Bipartisan - Spring 2017</h3>
+						<p>Combating fake news.</p>
+						<ul class="actions">
+							<li><a class="button small" href="https://github.com/Timtim305/MLNews" target="_blank">Details</a></li>
+						</ul>
+					</div>
+				</article>
+				<article>
+					<a href="ballmers_peak.png" class="image">
+										<img src="ballmers_peak.png" alt="" />
+									</a>
+					<div class="caption">
+						<h3>Ballmer's Peak</h3>
+						<p>A neat coding competition. Currently in the works.</p>
+					</div>
+				</article>
+				<article>
+					<a href="supermodel.png" class="image">
+										<img src="supermodel.png" alt="" />
+									</a>
+					<div class="caption">
+						<h3>Supermodel</h3>
+						<p>Aimed to make machine learning model selection easier. Currently in the works</p>
+					</div>
+				</article>
+			</div>
+
+		</section>
+
+		<!-- Six -->
+		<section class="wrapper style1 align-center">
+			<div class="inner">
+				<h2>Skills</h2>
+				<p>A summary of some of my strengths and passions. (this section currently under construction)</p>
+				<div class="items style1 medium onscroll-fade-in">
+					<section>
+						<span class="icon style2 major fa-diamond"></span>
+						<h3>Lorem</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+					</section>
+					<section>
+						<span class="icon style2 major fa-save"></span>
+						<h3>Ipsum</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+					</section>
+					<section>
+						<span class="icon style2 major fa-bar-chart"></span>
+						<h3>Dolor</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+					</section>
+					<section>
+						<span class="icon style2 major fa-wifi"></span>
+						<h3>Amet</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+					</section>
+					<section>
+						<span class="icon style2 major fa-cog"></span>
+						<h3>Magna</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+					</section>
+					<section>
+						<span class="icon style2 major fa-paper-plane"></span>
+						<h3>Tempus</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+					</section>
+					<section>
+						<span class="icon style2 major fa-desktop"></span>
+						<h3>Aliquam</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+					</section>
+					<section>
+						<span class="icon style2 major fa-refresh"></span>
+						<h3>Elit</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+					</section>
+					<section>
+						<span class="icon style2 major fa-hashtag"></span>
+						<h3>Morbi</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+					</section>
+					<section>
+						<span class="icon style2 major fa-bolt"></span>
+						<h3>Turpis</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+					</section>
+					<section>
+						<span class="icon style2 major fa-envelope"></span>
+						<h3>Ultrices</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+					</section>
+					<section>
+						<span class="icon style2 major fa-leaf"></span>
+						<h3>Risus</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+					</section>
+				</div>
+			</div>
+		</section>
+
+		<section class="wrapper style1 align-center">
+			<div class="inner">
+
+				<h2>Some of my favorite links</h2>
+				<p>
+					<a href=https://imgur.com/gallery/voutF target=_ blank> sorting algorithms cleverly visualized</a> <br>
+					<a href=https://kenpom.com/ target=_ blank> some great college basketball statistics</a> <br>
+					<a href=http://games.espn.com/ffl/clubhouse?leagueId=1580300&teamId=8&seasonId=2017 target=_ blank> my espn fantasy football team </a> (you may need an espn log in to view)<br>
+					<a href=https://reddit.com/r/earthporn target=_ blank> my favorite subreddit </a> <br>
+					<a href=https://www.youtube.com/watch?v=zAAsykRfLwo target=_ blank> a good pump-up instrumental mix </a> <br>
+					<a href=https://www.youtube.com/watch?v=9LKT7R-ZA1g target=_ blank> a great chill instrumental mix </a> <br>
+					<a href=https://www.youtube.com/watch?v=XaLPA69ohNk target=_ blank> a good summertime mix </a> <br>
+					<a href=https://github.com/adapta-project/adapta-gtk-theme target=_ blank> my fav ubuntu theme </a> <br>
+					<a href=https://github.com/numixproject/numix-icon-theme-circle target=_ blank> my fav ubuntu icon pack </a> <br>
+					<a href=http://www.informit.com/articles/article.aspx?p=30596&seqNum=6 target=_ blank> the first ever article ive ever read on machine learning </a><br>
+					<a href=https://drive.google.com/open?id=1DOqN7VSPiR2h04eygpOl-CFKPY5ijPUF target=_ blank> a bunch of beautiful, hand curated wallpapers</a>
+				</p>
+			</div>
+		</section>
 
 
-        <br></br>
+		<!-- Footer -->
+		<footer class="wrapper style1 align-center">
+			<div class="inner">
+				<ul class="icons">
+					<li><a hhref="https://www.facebook.com/txwang126" target="_blank" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="https://www.instagram.com/twang126/" target="_blank" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="https://www.linkedin.com/in/timothyxwang/" target=_ blank class="icon style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="mailto:timtim305@gmail.com" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+				<p>Cell: 240-751-7188</p>
+			</div>
+		</footer>
 
-        <sub> Copyright 2017- Timothy X. Wang
-  </html>
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
