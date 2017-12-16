@@ -17932,8 +17932,8 @@ zMwKOUGYmVkhJwgzMyvkBGFmZoX+P55ixN0JpBNpAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This is how we make a prediction for each song. Recall the Naive Bayes formula:</p>
-<p><img src="attachment:image.png" alt="image.png"></p>
+<p>This is how we make a prediction for each song. Recall the Naive Bayes formula (<a href="http://www.saedsayad.com/images/Bayes_rule.png">http://www.saedsayad.com/images/Bayes_rule.png</a>):</p>
+<p><img src="image.png"></p>
 <p>We have calculated the priors in the cell above, and now we just need to model this formula. However, there is a slight twist. Somehow, we need to account for unseen words in the test set. Take for example the case where we are computing the probability for a certain ngram, but we have never encountered that ngram in our training data. Having a probability of 0 would be terrible for our model because since we actually have seen that ngram in the real world (through the test set), it just doesn't make sense to assign a frequency of 0. As a result, we must introduce smoothing. So, instead of assigning a frequency of 0, we shift all of the frequencies by a tiny amount. This leads to some changes and tinkering of the original Naive Bayes formula.</p>
 <p>Furthermore, it is obvious to see that simply taking the product of successive probabilities is problematic. The probabilities we assign each ngram are so small that, as the number of terms grow, these probabilities will approach ever closer to 0 since we are compounding tiny fractions. To alleviate this, we simply log transform every probability and instead of multiplying, we just add these log transformations together.</p>
 <p>To read even more about this technique, this resource will be very helpful: <a href="https://web.stanford.edu/class/cs124/lec/naivebayes.pdf">https://web.stanford.edu/class/cs124/lec/naivebayes.pdf</a></p>
